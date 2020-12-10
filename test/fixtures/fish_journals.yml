@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 1
+  fish_type: MyString
+  fish_length: 1.5
+  fish_weight: 1.5
+  moon_phase: MyString
+  tide: MyString
+  rod_setup: MyString
+  note: MyString
+  image: MyString
+  user_id: 1
+  pin_id: 1
+
+two:
+  date: 1
+  fish_type: MyString
+  fish_length: 1.5
+  fish_weight: 1.5
+  moon_phase: MyString
+  tide: MyString
+  rod_setup: MyString
+  note: MyString
+  image: MyString
+  user_id: 1
+  pin_id: 1
