@@ -10,7 +10,6 @@ class CreateFishJournals < ActiveRecord::Migration[6.0]
       t.string :rod_setup
       t.string :note
       t.string :image
-      t.integer :user_id
       t.integer :pin_id
 
       t.timestamps

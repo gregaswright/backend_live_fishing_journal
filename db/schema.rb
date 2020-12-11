@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 2020_12_10_192926) do
     t.string "rod_setup"
     t.string "note"
     t.string "image"
-    t.integer "user_id"
     t.integer "pin_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -60,6 +59,7 @@ ActiveRecord::Schema.define(version: 2020_12_10_192926) do
   create_table "pins", force: :cascade do |t|
     t.float "latitude"
     t.float "longitude"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
