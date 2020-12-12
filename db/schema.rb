@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2020_12_10_192926) do
   end
 
   create_table "pins", force: :cascade do |t|
+    t.string "title"
     t.float "latitude"
     t.float "longitude"
     t.integer "user_id"
