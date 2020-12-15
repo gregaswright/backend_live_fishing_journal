@@ -45,7 +45,7 @@ class Api::V1::FishJournalsController < ApplicationController
 private
 
   def fish_journal_params
-    params.require(:fish_journal).permit( :date, :fish_type, :fish_length :fish_weight, :moon_phase, :tide, :rod_setup, :note, :image, :pin_id)
+    params.require(:fish_journal).permit( :date, :fish_type, :fish_length, :fish_weight, :moon_phase, :tide, :rod_setup, :note, :image, :pin_id)
   end
 
 end
