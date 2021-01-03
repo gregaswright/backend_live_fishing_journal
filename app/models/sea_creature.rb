@@ -1,0 +1,2 @@
+class SeaCreature < ApplicationRecord
+end

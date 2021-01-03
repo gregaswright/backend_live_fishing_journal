@@ -26,3 +26,15 @@ FishJournal.create(date: 050420, fish_type:"Rock Fish", fish_length:3.5, fish_we
 FishJournal.create(date: 050420, fish_type:"Striped Bass", fish_length:5.6, fish_weight:4.5, moon_phase:"", tide:"", rod_setup:"", note:"", image:"", pin_id:3)
 FishJournal.create(date: 050420, fish_type:"Black Fish", fish_length:4.5, fish_weight:3.5, moon_phase:"", tide:"", rod_setup:"", note:"", image:"", pin_id:3)
 FishJournal.create(date: 050420, fish_type:"Steel Head", fish_length:1.2, fish_weight:3.4, moon_phase:"", tide:"", rod_setup:"", note:"", image:"", pin_id:4)
+
+
+    response = RestClient.get('https://www.fishwatch.gov/api/species')
+    json = JSON.parse(response)
+    if !json.nil?
+        json.map do |sea_creature|
+            SeaCreature.create(species_name: "#{sea_creature["Species Name"]}", taste: "#{sea_creature["Taste"]}", texture: "#{sea_creature["Texture"]}", biology: "#{sea_creature["Biology"]}", habitat: "#{sea_creature["Habitat"]}", population_status: "#{sea_creature["Population Status"]}", phyiscal_description: "#{sea_creature["Physical Description"]}", fisheries_region: "#{sea_creature["NOAA Fisheries Region"]}", location: "#{sea_creature["Location"]}", availability: "#{sea_creature["Availability"]}", image: "#{sea_creature["Species Illustration Photo"]["src"]}")
+        end
+    else
+    puts "error seeding fish"
+    end
+

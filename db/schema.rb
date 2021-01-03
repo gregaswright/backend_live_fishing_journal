@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_10_192926) do
+ActiveRecord::Schema.define(version: 2020_12_18_153418) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,22 @@ ActiveRecord::Schema.define(version: 2020_12_10_192926) do
     t.float "latitude"
     t.float "longitude"
     t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "sea_creatures", force: :cascade do |t|
+    t.string "species_name"
+    t.string "taste"
+    t.string "texture"
+    t.string "biology"
+    t.string "habitat"
+    t.string "population_status"
+    t.string "phyiscal_description"
+    t.string "fisheries_region"
+    t.string "location"
+    t.string "availability"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
