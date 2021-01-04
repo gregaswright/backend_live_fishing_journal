@@ -45,6 +45,7 @@ class Api::V1::FishSavesController < ApplicationController
 private
 
   def fish_save_params
-    params.require(:fish_save).permit( :title, :latitude, :longitude, :user_id)
+    params.require(:fish_save).permit(:species_name, :taste, :texture, :biology, :habitat, :population_status, :phyiscal_description, :fisheries_region, :location, :availability, :image, :personal_note, :user_id)
   end
+  
 end
